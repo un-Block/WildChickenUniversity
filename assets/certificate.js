@@ -2,7 +2,6 @@ const { PDFDocument, StandardFonts } = PDFLib;
 const myDate = new Date();
 async function fillForm(fname, lname, major) {
   // Fetch the PDF with form fields
-  console.log(major)
   // const formUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_certificate.pdf"
   const formUrl = "https://raw.githubusercontent.com/WildChickenUniversity/WildChickenUniversity/master/assets/template_certificate.pdf"
   const englishUnicode = /^[a-zA-Z]+$/;
@@ -14,19 +13,18 @@ async function fillForm(fname, lname, major) {
   const url = 'https://pdf-lib.js.org/assets/ubuntu/Ubuntu-R.ttf'
   const ubuntuBytes = await fetch(url).then(res => res.arrayBuffer())
   const font5 = await pdfDoc.embedFont(ubuntuBytes)
-  // Font converted into base64 from https://github.com/ctrlcctrlv/chomsky, licensed under  OFL-1.1
-  // Copyright (c) 2018, Fredrick R. Brennan (<copypaste@kittens.ph>),
+  // Copyright (c) 2018, Fredrick R. Brennan (<copypaste@kittens.ph>)
+  // https://github.com/ctrlcctrlv/chomsky, licensed under  OFL-1.1
   const chomskyFontUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/fonts/Chomsky.otf";
   const chomskyFontByte = await fetch(chomskyFontUrl).then(res => res.arrayBuffer());
   const chomskyFont = await pdfDoc.embedFont(chomskyFontByte);
-
+  
+  // Google Noto Serif Simplified Chinese 900
   const sourceHanSerifUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/fonts/noto-serif-sc-v16-chinese-simplified-900.woff2";
   const sourceHanSerifByte = await fetch(sourceHanSerifUrl).then(res => res.arrayBuffer());
   const sourceHanSerif = await pdfDoc.embedFont(sourceHanSerifByte);
 
-
-  console.log(myDate.toDateString().substring(4));
-  console.log(`${fname} ${lname} major: ${major}`);
+  console.log(`Today is ${myDate.toDateString().substring(4)}, generating for ${fname} ${lname} with major ${major}`);
   // Get the form containing all the fields
   const form = pdfDoc.getForm();
   // Get all fields in the PDF by their names
