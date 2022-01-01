@@ -23,7 +23,7 @@
       </div>
     </div>
   </header>
-
+  <script src="../assets/certificate.js"></script>
   <div id="page" class="contain-1120 group">
     <main id="main-content" class="content-full" role="main" tabindex="0">
       <div id="portal_row_container">
@@ -38,8 +38,8 @@
           </ul>
         </div>
       </div>
-      <form action="result.html" method="GET">
-        <p class="success">To get your admission letter, please enter your first name and last name.</p>
+      <form>
+        <p class="success">To get your Graduation Certificate, please enter your first name and last name.</p>
         <table class="plain">
           <colgroup>
             <col style="width: 150px;">
@@ -67,7 +67,7 @@
           </tbody>
         </table>
         <br>
-        <div class="action"><button class="default" onclick="if (FW.Validate(this)) FW.Postback(this); return (false);" type="submit">I WANT AN ADMISSION LETTER</button></div>
+        <div class="action"><button class="default" onclick="fillForm(fname, lname, major)" type="submit">Generate</button></div>
       </form>
 
       <br>
