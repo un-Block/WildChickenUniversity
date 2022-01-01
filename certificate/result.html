@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="supports-boxshadow no-touch" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="shortcut icon" href="../assets/favicon.svg">
+  <link href="../assets/admissions.css" rel="stylesheet" type="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/pdf-lib"></script>
+  <script src="https://unpkg.com/downloadjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+  <title>Wild Chicken Applicant Status Portal</title>
+</head>
+
+<body>
+  <header id="mini">
+    <div id="top-bar">
+      <div class="contain-1120 group">
+        <div id="left"><a href="https://wcu.edu.pl"><img alt="Wild Chicken University" src="../assets/Wild_Chicken_White.svg"><span class="hide-label">Wild Chicken University</span></a></div>
+      </div>
+    </div>
+    <div class="bottom-bar contain-1120 group">
+      <div id="department">
+        <h1><a href="#">Diploma</a></h1>
+      </div>
+    </div>
+  </header>
+  <script src="../assets/certificate.js.js"></script>
+  <div id="page" class="contain-1120 group">
+    <main id="main-content" class="content-full" role="main" tabindex="0">
+      <div id="portal_row_container">
+        <div class="part_rows_container col-1" data-col="1">
+          <div class="part ">
+            <section class="hero">
+              <div class="banner_text small_text">
+                <p id="welcome">Welcome</p>
+              </div>
+          </div>
+          </section>
+          <ul class="subtabs">
+            <li><a class="selected" href="#" onclick="$(this).parents('ul').find('.selected').removeClass('selected'); $(this).addClass('selected');">Diploma Generator</a></li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <div class="part_rows_container col-1" data-col="1">
+        <div id="admitted">
+          <br>
+          <h3>Status Update</h3>
+          <p>Congratulations! It is with great pleasure to offer you a GradCert. Please click on the button below to review your GradCert!</p>
+          <div class="action"><button class="default" onclick="fillForm(fname, lname, major); party.confetti(this);">
+              <b>Download (it takes TIME) &gt;&gt;</b>
+            </button>
+          </div>
+          <br>
+        </div>
+
+        <p style="color: #7f4f24;"> If your GPA at WCU is higher than 3.5, you may be made into a chicken nugget. <wbr />And if you no longer wish to continue your application to Wild Chicken, please go <a href="https://www.mcdonalds.com/us/en-us/product/chicken-mcnuggets-4-piece.html" target="_blank">BUY </a> some Chicken McNuggets®. </p>
+
+      </div>
+      <script src="https://utteranc.es/client.js" repo="WildChickenUniversity/WildChickenUniversity" issue-term="title" label="ADMISSION COMMENT" theme="github-light" crossorigin="anonymous" async>
+      </script>
+
+      <div class="footer">
+        <br>
+        <hr>Wild Chicken University is committed to a policy of non-discrimination.
+        <a href="../privacy.html"> Privacy Policy </a>
+        <br> Copyleft <span class="copyleft">©</span> <a href="https://github.com/Mr-Sheep/WildChickenUniversity">Snorlax</a>, licensed under GPL v3. Assets have their own licenses.
+      </div>
+      <div style="clear: both;"></div>
+    </main>
+  </div>
+  <script>
+    const url = new URL(document.URL);
+    const fname = url.searchParams.get("fname");
+    const lname = url.searchParams.get("lname");
+    const major = usr.searchParams.get("major");
+    document.getElementById("welcome").textContent += `, ${fname} ${lname}`
+  </script>
+
+  <div class="progress_box" style="visibility: hidden;"></div>
+</body>
+
+</html>
