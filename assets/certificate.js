@@ -37,7 +37,7 @@ async function fillForm(fname, lname, major) {
   majorField.setText(major);
   nameField.setText(`${fname} ${lname}`);
   const font = englishUnicode.test(major) ? chomskyFont : sourceHanSerif;
-  const fontSize = font.sizeAtHeight(31);
+  const fontSize = 31;
   majorField.updateAppearances(font);
   nameField.updateAppearances(chomskyFont);
 

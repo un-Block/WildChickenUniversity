@@ -71,8 +71,9 @@
           </tbody>
         </table>
         <br>
-        <div class="action"><button class="default" onclick="fillForm(fname, lname, major)" type="submit">Generate</button></div>
+        
       </form>
+      <div class="action"><button class="default" onclick="fillForm(document.getElementById('fname').value, document.getElementById('lname').value, document.getElementById('major').value); party.confetti(this);">Generate</button></div>
 
       <br>
       <div class="footer">
@@ -86,6 +87,7 @@
     </main>
   </div>
   <div class="progress_box" style="visibility: hidden;"></div>
+
 </body>
 
 </html>
