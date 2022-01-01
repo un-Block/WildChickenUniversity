@@ -14,11 +14,11 @@ async function fillForm(fname, lname, major) {
   const font5 = await pdfDoc.embedFont(ubuntuBytes)
   // Font converted into base64 from https://github.com/ctrlcctrlv/chomsky, licensed under  OFL-1.1
   // Copyright (c) 2018, Fredrick R. Brennan (<copypaste@kittens.ph>),
-  const chomskyFontUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/master/assets/fonts/Chomsky.otf";
+  const chomskyFontUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/fonts/Chomsky.otf";
   const chomskyFontByte = await fetch(chomskyFontUrl).then(res => res.arrayBuffer());
   const chomskyFont = await pdfDoc.embedFont(chomskyFontByte);
 
-  const sourceHanSerifUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/master/assets/fonts/noto-serif-sc-v16-chinese-simplified-900.woff2";
+  const sourceHanSerifUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/fonts/noto-serif-sc-v16-chinese-simplified-900.woff2";
   const sourceHanSerifByte = await fetch(sourceHanSerifUrl).then(res => res.arrayBuffer());
   const sourceHanSerif = await pdfDoc.embedFont(sourceHanSerifByte);
 
@@ -33,7 +33,7 @@ async function fillForm(fname, lname, major) {
 
   // Fill in the name field
   majorField.setText(major);
-  nameField.setText(`${fname} ${lname},`);
+  nameField.setText(`${fname} ${lname}`);
   const font = englishUnicode.test(major) ? chomskyFont : sourceHanSerif;
   const fontSize = font.sizeAtHeight(31);
   majorField.updateAppearances(font);
