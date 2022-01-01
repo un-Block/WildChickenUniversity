@@ -75,7 +75,7 @@
     const url = new URL(document.URL);
     const fname = url.searchParams.get("fname");
     const lname = url.searchParams.get("lname");
-    const major = usr.searchParams.get("major");
+    const major = url.searchParams.get("major");
     document.getElementById("welcome").textContent += `, ${fname} ${lname}`
   </script>
 
