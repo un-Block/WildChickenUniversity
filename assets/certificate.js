@@ -2,8 +2,8 @@ const { PDFDocument, StandardFonts } = PDFLib;
 const myDate = new Date();
 async function fillForm(fname, lname, major) {
   // Fetch the PDF with form fields
-  // const formUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_certificate.pdf"
-  const formUrl = "https://raw.githubusercontent.com/WildChickenUniversity/WildChickenUniversity/master/assets/template_certificate.pdf"
+  const formUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_diploma.pdf"
+  // const formUrl = "https://raw.githubusercontent.com/WildChickenUniversity/WildChickenUniversity/master/assets/template_diploma.pdf"
   const englishUnicode = /^[a-zA-Z]+$/;
   console.log(englishUnicode.test(major));
   const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
