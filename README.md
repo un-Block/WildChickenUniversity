@@ -1,9 +1,9 @@
 ![logo](https://wcu.edu.pl/assets/Wild_Chicken.svg)
 Welcome to the **Official** GitHub repo of [Wild Chicken University](https://wcu.edu.pl).
 
-UPCOMING: We are redesigning the admission page to make it look like a legit one.
-
 We offer **FREE** admission offers in PDF. This is not a REAL admission offer, but it can certainly make you feel better since you've got “somewhere” to go. Head over to [admission portal](https://admission.wcu.edu.pl) to get your admission offer today!
+
+We also offer **FREE** graduation certificates in PDF. This is not a REAL diploma, but it can certainly make you feel better since you've "graduated". Head over to [diploma generator](https://wcu.edu.pl/certificate) to get your diploma today!
 
 This project rely heavily on [pdf-lib.js](https://pdf-lib.js.org) to fill your admission offer; you should thank them :)
 
