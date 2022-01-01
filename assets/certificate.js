@@ -3,7 +3,8 @@ const myDate = new Date();
 async function fillForm(fname, lname, major) {
   // Fetch the PDF with form fields
   console.log(major)
-  const formUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_certificate.pdf"
+  // const formUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_certificate.pdf"
+  const formUrl = "https://raw.githubusercontent.com/WildChickenUniversity/WildChickenUniversity/master/assets/template_certificate.pdf"
   const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
   const pdfDoc = await PDFDocument.load(formPdfBytes);
   const fontkit = window.fontkit;
