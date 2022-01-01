@@ -3,8 +3,10 @@ const myDate = new Date();
 async function fillForm(fname, lname, major) {
   // Fetch the PDF with form fields
   console.log(major)
-  const formUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_certificate.pdf"
+  // const formUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_certificate.pdf"
+  const formUrl = "https://raw.githubusercontent.com/WildChickenUniversity/WildChickenUniversity/master/assets/template_certificate.pdf"
   const englishUnicode = /^[a-zA-Z]+$/;
+  console.log(englishUnicode.test(major));
   const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
   const pdfDoc = await PDFDocument.load(formPdfBytes);
   const fontkit = window.fontkit;
@@ -37,7 +39,7 @@ async function fillForm(fname, lname, major) {
   const font = englishUnicode.test(major) ? chomskyFont : sourceHanSerif;
   const fontSize = font.sizeAtHeight(31);
   majorField.updateAppearances(font);
-  nameField.updateAppearances(font);
+  nameField.updateAppearances(chomskyFont);
 
   // Flatten the form fields
   form.flatten();
