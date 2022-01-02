@@ -135,7 +135,8 @@ html {
 }
 
 body {
-	font: 62.5%/1.7em "Akkurat Pro Regular", Arial, sans-serif;
+	font: 62.5%/1.7em "Roboto", Arial, sans-serif;
+	font-weight : 400;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -224,37 +225,43 @@ img {
 }
 
 #main-content h1 {
-	font: 46px/1.2em "Campton Extra Light", "Courier New", sans-serif;
+	font: 46px/1.2em "Poppins", "Courier New", sans-serif;
+	font-weight: 200;
 	color: #457b9d;
 	margin-bottom: 1rem;
 }
 
 #main-content h2 {
-	font: 34px "Campton Bold", Impact, sans-serif;
+	font: 34px "Poppins", Impact, sans-serif;
+	font-weight: 700;
 	color: #457b9d;
 	margin-bottom: .5rem;
 }
 
 #main-content h3 {
-	font: 26px "Akkurat Pro Regular", Arial, sans-serif;
+	font: 26px "Roboto", Arial, sans-serif;
+	font-weight : 400;
 	color: #706c6b;
 	margin-bottom: 1rem;
 }
 
 #main-content h4 {
-	font: 21px "Akkurat Pro Regular", Arial, sans-serif;
+	font: 21px "Roboto", Arial, sans-serif;
+	font-weight : 400;
 	color: #457b9d;
 	margin-bottom: 1rem;
 }
 
 #section-header h2 {
-	font: 18px "Akkurat Pro Bold", "Arial Black", sans-serif;
+	font: 18px "Roboto", "Arial Black", sans-serif;
+	font-weight: 700;
 	text-transform: none;
 	margin-bottom: 0;
 }
 
 .content-full a {
-	font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
+	font-family: "Roboto", "Arial Black", sans-serif;
+	font-weight: 700;
 	color: #457b9d;
 	text-decoration: none;
 }
@@ -265,14 +272,15 @@ img {
 
 .content-full strong,
 .content-full b {
-	font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
-	font-weight: normal;
+	font-family: "Roboto", "Arial Black", sans-serif;
+	font-weight: 700;
 }
 
 .content-full em,
 .content-full i {
-	font-family: "Akkurat Pro Italic", Arial, sans-serif;
-	font-style: normal;
+	font-family: "Roboto", Arial, sans-serif;
+	font-weight: 400;
+	font-style: italic;
 }
 
 .content-full strong em,
@@ -281,9 +289,9 @@ img {
 .content-full i strong,
 .content-full b i,
 .content-full i b {
-	font-family: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
-	font-style: normal;
-	font-weight: normal;
+	font-family: "Roboto", "Arial Black", sans-serif;
+	font-style: italic;
+	font-weight: 700;
 }
 
 .content-full p:last-of-type {
@@ -297,7 +305,6 @@ img {
 }
 
 .content-full ul li {
-	background: url("https://common.northwestern.edu/v8/css/images/icons/bullet.png") top left no-repeat;
 	background-position: 0 .5em;
 	padding: 0 0 .5em 1em;
 	overflow: hidden;
@@ -315,7 +322,8 @@ img {
 
 .content-full table {
 	width: 100%;
-	font: 16px "Akkurat Pro Regular", Arial, sans-serif;
+	font: 16px "Roboto", Arial, sans-serif;
+	font-weight : 400;
 	color: #6d6e71;
 }
 
@@ -345,7 +353,8 @@ header {
 #top-bar {
 	background: #1d3557;
 	padding: 0;
-	font: 12px/1.4em "Akkurat Pro Bold", "Arial Black", sans-serif;
+	font: 12px/1.4em "Roboto", "Arial Black", sans-serif;
+	font-weight: 700;
 }
 
 #top-bar li {
@@ -405,7 +414,8 @@ header {
 }
 
 #department h1 a {
-	font-family: "Akkurat Pro Regular", Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
+	font-weight : 400;
 	color: #fff;
 	text-decoration: none;
 }
@@ -514,13 +524,6 @@ header {
 		margin: 2rem 0 2rem 0;
 	}
 
-	#back-to-top:before {
-		background: url("https://common.northwestern.edu/v8/css/images/icons/arrow-up-ltpurple.svg") no-repeat 1rem 0/15px 19px;
-	}
-
-	#back-to-top:after {
-		background: url("https://common.northwestern.edu/v8/css/images/icons/arrow-up-ltpurple.svg") no-repeat 1.1rem 0/15px 19px;
-	}
 
 	#top-nav {
 		display: none;
@@ -611,58 +614,9 @@ header {
 	}
 }
 
-@font-face {
-	font-family: "Akkurat Pro Light";
-	src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProLight.woff2") format("woff2"), url("https://common.northwestern.edu/v8/css/fonts/AkkuratProLight.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Akkurat Pro Light Italic";
-	src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProLightItalic.woff2") format("woff2"), url("https://common.northwestern.edu/v8/css/fonts/AkkuratProLightItalic.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Akkurat Pro Regular";
-	src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProRegular.woff2") format("woff2"), url("https://common.northwestern.edu/v8/css/fonts/AkkuratProRegular.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Akkurat Pro Italic";
-	src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProItalic.woff2") format("woff2"), url("https://common.northwestern.edu/v8/css/fonts/AkkuratProItalic.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Akkurat Pro Bold";
-	src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProBold.woff2") format("woff2"), url("https://common.northwestern.edu/v8/css/fonts/AkkuratProBold.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Akkurat Pro Bold Italic";
-	src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProBoldItalic.woff2") format("woff2"), url("https://common.northwestern.edu/v8/css/fonts/AkkuratProBoldItalic.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Campton Book";
-	src: url("https://common.northwestern.edu/v8/css/fonts/CamptonBook.woff2") format("woff2"), url("https://common.northwestern.edu/v8/css/fonts/CamptonBook.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Campton Bold";
-	src: url("https://common.northwestern.edu/v8/css/fonts/CamptonBold.woff2") format("woff2"), url("https://common.northwestern.edu/v8/css/fonts/CamptonBold.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Campton Extra Bold";
-	src: url("https://common.northwestern.edu/v8/css/fonts/CamptonExtraBold.woff2") format("woff2"), url("https://common.northwestern.edu/v8/css/fonts/CamptonExtraBold.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Campton Extra Light";
-	src: url("https://common.northwestern.edu/v8/css/fonts/CamptonExtraLight.woff2") format("woff2"), url("https://common.northwestern.edu/v8/css/fonts/CamptonExtraLight.woff") format("woff");
-}
-
 p span {
-	font: 16px/1.7em "Akkurat Pro Regular", Arial, sans-serif !important;
+	font: 16px/1.7em "Roboto", Arial, sans-serif !important;
+	font-weight : 400;
 }
 
 p.error,
@@ -687,13 +641,13 @@ select {
 button[type="button"],
 .action .default,
 .action .button {
-	font: 16px "Akkurat Pro Bold", "Arial Black", sans-serif !important;
+	font: 16px "Roboto", "Arial Black", sans-serif !important;
+	font-weight: 700;
 	color: #fff !important;
 	background: #457b9d !important;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-weight: normal;
 	margin: .5em .5em .5em 0;
 	padding: .8em 1em .7em 1em;
 	cursor: pointer;
@@ -793,6 +747,10 @@ button[type="button"]:active:before,
 
 }
 
+.chinese {
+	font-family: 'Noto Serif SC', serif;
+	font-weight: 600;
+}
 
 ul.subtabs {
 	background: none;
@@ -810,7 +768,8 @@ ul.subtabs>li {
 }
 
 ul.subtabs>li>a {
-	font: 18px "Akkurat Pro Regular", Arial, sans-serif;
+	font: 18px "Roboto", Arial, sans-serif;
+	font-weight: 400;
 	color: #457b9d !important;
 	text-decoration: none !important;
 	text-align: center;
@@ -847,7 +806,8 @@ tbody>tr>td {
 }
 
 .banner_text {
-	font: 48px/1.2em "Campton Bold", Impact, sans-serif;
+	font: 48px/1.2em "Poppins", Impact, sans-serif;
+	font-weight: 700;
 	color: #5e81ac ;
 	text-shadow: 2px 2px 0px #3b4252;
 	margin: 0 0 1rem 1rem;
@@ -857,13 +817,15 @@ tbody>tr>td {
 
 @media only screen and (max-width: 480px) {
 	.small_text {
-		font: 32px/1.2em "Campton Bold", Impact, sans-serif;
+		font: 32px/1.2em "Poppins", Impact, sans-serif;
+		font-weight: 700;
 	}
 }
 
 @media only screen and (max-width: 1000px) {
 	.med_text {
-		font: 48px/1.2em "Campton Bold", Impact, sans-serif;
+		font: 48px/1.2em "Poppins", Impact, sans-serif;
+		font-weight: 700;
 	}
 }
 
