@@ -57,12 +57,11 @@
             <tr>
               <th><label for="checkbox" data-required="1" spellcheck="false">Admitted? </label></th>
               <td><input id="admitted" type="checkbox" name="admitted" value="true" /></td>
-              <td><input id='checkboxHidden' type='hidden' name='admitted' value='false'></td>
             </tr>
           </tbody>
         </table>
         <br>
-        <div class="action"><button class="default" onclick="if (FW.Validate(this)) FW.Postback(this); return (false);" type="submit">I WANT AN ADMISSION LETTER</button></div>
+        <div class="action"><button class="default" onclick="if (FW.Validate(this)) FW.Postback(this); return (false); " type="submit">I WANT AN ADMISSION LETTER</button></div>
       </form>
 
       <br>
@@ -76,11 +75,6 @@
       <div style="clear: both;"></div>
     </main>
   </div>
-  <script>
-    if (document.getElementById("admitted").checked) {
-      document.getElementById('checkboxHidden').disabled = true;
-    }
-  </script>
   <div class="progress_box" style="visibility: hidden;"></div>
 </body>
 

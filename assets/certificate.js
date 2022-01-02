@@ -5,7 +5,7 @@ async function fillForm(fname, lname, major) {
   const formUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_diploma.pdf"
   // const formUrl = "https://raw.githubusercontent.com/WildChickenUniversity/WildChickenUniversity/master/assets/template_diploma.pdf"
   const englishUnicode = /^[a-zA-Z]+$/;
-  console.log(englishUnicode.test(major));
+  console.log(`Is user input in English: ${englishUnicode.test(major)}`);
   const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
   const pdfDoc = await PDFDocument.load(formPdfBytes);
   const fontkit = window.fontkit;
@@ -35,6 +35,7 @@ async function fillForm(fname, lname, major) {
   majorField.setText(major);
   nameField.setText(`${fname} ${lname}`);
   const font = englishUnicode.test(major) ? chomskyFont : sourceHanSerif;
+  console.log(font)
   const fontSize = 31;
   majorField.updateAppearances(font);
   nameField.updateAppearances(chomskyFont);
