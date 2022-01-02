@@ -10,7 +10,7 @@ async function fillForm(fname, lname, admitted) {
   const pdfDoc = await PDFDocument.load(formPdfBytes);
   const timesRomanFont = await pdfDoc.embedFont(StandardFonts.TimesRoman);
   const fontSize = 12;
-  console.log(`Today is ${myDate.toDateString().substring(4)}, generating for ${fname} ${lname} with major ${major}`);
+  console.log(`Today is ${myDate.toDateString().substring(4)}, generating for ${fname} ${lname} with application status ${admitted}`);
   // Get the form containing all the fields
   const form = pdfDoc.getForm();
   // Get all fields in the PDF by their names
