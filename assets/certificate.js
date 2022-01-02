@@ -4,7 +4,7 @@ async function fillForm(fname, lname, major) {
   // Fetch the PDF with form fields
   const formUrl = "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_diploma.pdf"
   // const formUrl = "https://raw.githubusercontent.com/WildChickenUniversity/WildChickenUniversity/master/assets/template_diploma.pdf"
-  const englishUnicode = /^[a-zA-Z]+$/;
+  const englishUnicode = /^[0-9a-zA-Z]+$/;
   console.log(`Is user input in English: ${englishUnicode.test(major)}`);
   const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
   const pdfDoc = await PDFDocument.load(formPdfBytes);
