@@ -46,7 +46,7 @@ async function fillForm(fname, lname, major) {
   // Trigger the browser to download the PDF document
   download(
     pdfBytes,
-    `WCU_Graduation_Certificate_${fname}_${lname}_${myDate.toDateString().substring(4)}.pdf`,
+    `WCU_Graduation_Certificate_${fname}_${lname}_${myDate.toDateString().substring(4).replace(/\s/g, '_')}.pdf`,
     "application/pdf"
   );
 
