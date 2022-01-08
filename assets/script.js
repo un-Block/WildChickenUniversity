@@ -2,17 +2,17 @@ const { PDFDocument, StandardFonts } = PDFLib;
 const myDate = new Date();
 async function fillForm(fname, lname, admitted, graduate) {
   // Fetch the PDF with form fields
-  let formUrl;
-  let status = graduate ? "Graduate" : "Undergraduae";
-  let decision = admitted ? "Accept" : "Decline";
-  if (graduate) {
-    formUrl = admitted ?
-      "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_master.pdf" : "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_master_reject.pdf";
-  } else {
-    formUrl = admitted ?
-      "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template.pdf" : "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_reject.pdf";      
-  }
-  console.log(`template url: ${formUrl}`)
+  let formUrl = 
+  // let status = graduate ? "Graduate" : "Undergraduae";
+  // let decision = admitted ? "Accept" : "Decline";
+  // if (graduate) {
+  //   formUrl = admitted ?
+  //     "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_master.pdf" : "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_master_reject.pdf";
+  // } else {
+  //   formUrl = admitted ?
+  //     "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template.pdf" : "https://cdn.jsdelivr.net/gh/WildChickenUniversity/WildChickenUniversity/assets/template_reject.pdf";      
+  // }
+  // console.log(`template url: ${formUrl}`)
 
   const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
 
