@@ -1,8 +1,8 @@
 const { PDFDocument, StandardFonts } = PDFLib;
 const myDate = new Date();
-async function fillForm(fname, lname, admitted, graduate) {
+async function fillForm(fname, lname) {
   // Fetch the PDF with form fields
-  let formUrl = 
+  let formUrl = "https://cdn.jsdelivr.net/gh/un-Block/WildChickenUniversity@master/assets/template_master.pdf"
   // let status = graduate ? "Graduate" : "Undergraduae";
   // let decision = admitted ? "Accept" : "Decline";
   // if (graduate) {
@@ -39,7 +39,7 @@ async function fillForm(fname, lname, admitted, graduate) {
   // Trigger the browser to download the PDF document
   download(
     pdfBytes,
-    `WCU_Admission_Decision_${decision}_${status}_${fname}_${lname}_${myDate.toDateString().substring(4).replace(/\s/g, '_')}.pdf`,
+    `WCU_Admission_Decision_${fname}_${lname}_${myDate.toDateString().substring(4).replace(/\s/g, '_')}.pdf`,
     "application/pdf"
   );
 
