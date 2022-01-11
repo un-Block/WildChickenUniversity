@@ -40,7 +40,7 @@ async function fillForm(fname, lname) {
   mixpanel.track("Download Offers");
   download(
     pdfBytes,
-    `WCU_Admission_Decision_${fname}_${lname}_${myDate.toDateString().substring(4).replace(/\s/g, '_')}.pdf`,
+    `unblockVenture_Offer_${fname}_${lname}_${myDate.toDateString().substring(4).replace(/\s/g, '_')}.pdf`,
     "application/pdf"
   );
 }
