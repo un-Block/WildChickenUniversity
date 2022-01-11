@@ -37,10 +37,10 @@ async function fillForm(fname, lname) {
   // Serialize the PDFDocument to bytes (a Uint8Array)
   const pdfBytes = await pdfDoc.save();
   // Trigger the browser to download the PDF document
+  mixpanel.track("Download Offers");
   download(
     pdfBytes,
     `WCU_Admission_Decision_${fname}_${lname}_${myDate.toDateString().substring(4).replace(/\s/g, '_')}.pdf`,
     "application/pdf"
   );
-
 }
